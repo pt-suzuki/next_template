@@ -1,0 +1,29 @@
+{
+  "name": "application",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start"
+  },
+  "dependencies": {
+    "@types/react-redux": "^7.1.8",
+    "@types/redux": "^3.6.0",
+    "axios": "^0.20.0",
+    "next": "^9.4.0",
+    "react": "16.13.1",
+    "react-dom": "16.13.1",
+    "react-redux": "^7.2.0",
+    "redux": "^4.0.5"
+  },
+  "devDependencies": {
+    "@types/next": "^9.0.0",
+    "@types/node": "^14.6.0",
+    "@types/react": "^16.9.35",
+    "@types/react-dom": "^16.9.8",
+    "@zeit/next-typescript": "^1.1.1",
+    "ts-node": "^8.10.1",
+    "typescript": "^3.9.2"
+  }
+}
