@@ -1,4 +1,4 @@
-import { ApiConnection } from "../api_connection";
+import { HttpClient } from "../http_client";
 import { UserTranslator } from "./user_translator";
 import { ApiUri } from "../../../enums/api_uri";
 import { User } from "./user";
@@ -16,10 +16,10 @@ export interface UserRepository {
 }
 
 export class UserRepositoryImpl implements UserRepository {
-  private client: ApiConnection;
+  private client: HttpClient;
   private translator: UserTranslator;
 
-  constructor(client: ApiConnection, translator: UserTranslator) {
+  constructor(client: HttpClient, translator: UserTranslator) {
     this.client = client;
     this.translator = translator;
   }

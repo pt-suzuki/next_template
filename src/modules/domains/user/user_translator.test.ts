@@ -13,7 +13,7 @@ describe('UserのTranslatorテスト', () => {
     translator = new UserTranslatorImpl(responseHandler);
   });
 
-  describe('APIのレスポンスをUserの構造体リストに変換するテスト', () => {
+  describe('APIのレスポンスをUserの構造体リストに変換する', () => {
     let result: Result<User[], ResponseError>;
     describe('正常系', () => {
       beforeAll(async () => {

@@ -1,127 +1,22 @@
 {
-  "wallet_schedules": [
+  "user": [
     {
-      "id": 341,
-      "bankAccountId": 27,
-      "entrySide": 1,
-      "scheduleType": 1,
-      "period": 1,
-      "interval": 1,
-      "holidayType": 1,
-      "monthEndType": 0,
-      "amount": 0,
-      "settlementDate": "2021-10-01",
-      "tags": []
+      "id": 5,
+      "company_id": 7,
+      "company_name": "testCompanyName",
+      "email": "test@example.com",
+      "name": "testName",
+      "address": "testAddress",
+      "birthday": "1995-03-10"
     },
     {
-      "id": 379,
-      "bankAccountId": 28,
-      "entrySide": -1,
-      "scheduleType": 2,
-      "period": 9999,
-      "interval": 3,
-      "holidayType": 2,
-      "monthEndType": 0,
-      "amount": 100000,
-      "settlementDate": "2021-10-10",
-      "tags": [
-        {
-          "id": 1,
-          "name": "タグ名１",
-          "isValid": true,
-          "isDeleted": false
-        },
-        {
-          "id": 2,
-          "name": "タグ名２",
-          "isValid": true,
-          "isDeleted": false
-        },
-        {
-          "id": 3,
-          "name": "タグ名３",
-          "isValid": true,
-          "isDeleted": false
-        }
-      ]
-    }
-  ],
-  "wallet_txns_last_month_balance": {
-    "1": 0,
-    "2": "50000000"
-  },
-  "tags": [
-    {
-      "id": 1,
-      "name": "取引先１",
-      "createdAt":"2021-10-26T16:22:15.259+09:00"
-    },
-    {
-      "id": 2,
-      "name": "取引先２",
-      "createdAt":"2021-10-27T16:22:15.259+09:00"
-    },
-    {
-      "id": 3,
-      "name": "取引先３",
-      "createdAt":"2021-10-28T16:22:15.259+09:00"
-    }
-  ],
-  "tags_pagenation": {
-    "totalCount": 1,
-    "limit": 30,
-    "data": [
-      {
-        "id": 1,
-        "name": "取引先１",
-        "createdAt":"2021-10-26T16:22:15.259+09:00"
-      }
-    ]
-  },
-  "tags_to_wallet_txn": [
-    {
-      "walletTxnId": 1,
-      "walletTxnDate": "2021-06-06",
-      "tags": [
-        {
-          "id": 1,
-          "name": "取引先１"
-        }
-      ]
-    }
-  ],
-  "tags_to_wallet_schedule": [
-    {
-      "walletSchedulesId": 1,
-      "tags": [
-        {
-          "id": 1,
-          "name": "取引先１"
-        }
-      ]
-    }
-  ],
-  "holidays": [
-    "2021-11-03",
-    "2021-11-23"
-  ],
-  "steps": {
-    "step": 2
-  },
-  "companies": [
-    {
-      "id": 1,
-      "corporateNumber": "9010001041711",
-      "zipcode": "1030007",
-      "zipcodeWithHyphen": "103-0007",
-      "prefectureCode": "13",
-      "prefectureName": "東京都",
-      "cityName": "中央区",
-      "streetNumber": "日本橋浜町３丁目２３番３号",
-      "fullAddress": "東京都中央区日本橋浜町３丁目２３番３号",
-      "name": "株式会社ギンビス",
-      "furigana": "ギンビス",
-      "allianceCalcBankId": null
+      "id": 6,
+      "company_id": 8,
+      "company_name": "testCompanyName2",
+      "email": "test2@example.com",
+      "name": "testName2",
+      "address": "testAddress2",
+      "birthday": "1995-10-15"
     }
   ]
 }

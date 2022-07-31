@@ -5,7 +5,7 @@ import { UserUseCaseImpl } from "../domains/user/user_use_case";
 
 export const userTranslator = new UserTranslatorImpl(init.responseHandlerImpl);
 export const userRepository = new UserRepositoryImpl(
-  init.apiConnection,
+  init.http_client,
   userTranslator
 );
 export const userUseCaseImpl = new UserUseCaseImpl(userRepository);

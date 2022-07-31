@@ -5,7 +5,7 @@ import { AuthUseCaseImpl } from "../domains/auth/auth_use_case";
 
 export const authTranslator = new AuthTranslatorImpl(init.responseHandlerImpl);
 export const authRepository = new AuthRepositoryImpl(
-  init.apiConnection,
+  init.http_client,
   authTranslator
 );
 export const authUseCaseImpl = new AuthUseCaseImpl(

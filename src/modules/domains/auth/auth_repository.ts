@@ -1,4 +1,4 @@
-import { ApiConnection } from "../api_connection";
+import { HttpClient } from "../http_client";
 import { ApiUri } from "../../../enums/api_uri";
 import { AuthTranslator } from "./auth_translator";
 import { SignInFormJson } from "./signIn_form";
@@ -13,10 +13,10 @@ export interface AuthRepository {
 }
 
 export class AuthRepositoryImpl implements AuthRepository {
-  private client: ApiConnection;
+  private client: HttpClient;
   private translator: AuthTranslator;
 
-  constructor(client: ApiConnection, translator: AuthTranslator) {
+  constructor(client: HttpClient, translator: AuthTranslator) {
     this.client = client;
     this.translator = translator;
   }

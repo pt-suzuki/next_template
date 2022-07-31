@@ -6,16 +6,14 @@ const PORT = 3228;
 
 export const startMockServer = (): void => {
   const app = jsonServer.create();
-  /*
   app.use(
     jsonServer.rewriter({
-      '/api/private/example':'/example',
+      '/api/*': '/$1',
     }),
   );
-  */
-  const middlewares = jsonServer.defaults();
+  const middleware = jsonServer.defaults();
   const router = jsonServer.router('test/mock/server/db.json');
-  app.use(middlewares);
+  app.use(middleware);
   app.use(router);
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   (router as any).render = (req, res) => {

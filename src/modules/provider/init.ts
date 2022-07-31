@@ -1,5 +1,5 @@
-import { ApiConnection } from "../domains/api_connection";
+import { HttpClient } from "../domains/http_client";
 import { ResponseHandlerImpl } from "../domains/response_handler";
 
-export const apiConnection = new ApiConnection();
+export const http_client = new HttpClient();
 export const responseHandlerImpl = new ResponseHandlerImpl();

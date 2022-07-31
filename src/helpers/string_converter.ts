@@ -34,5 +34,3 @@ const formatter = new Intl.NumberFormat('ja-JP');
 export const convertYen = (value: number): string => {
   return `${formatter.format(value)}`;
 };
-
-/* eslint-enable @typescript-eslint/no-explicit-any */

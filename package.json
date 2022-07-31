@@ -3,9 +3,12 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
+    "dev": "ts-node --project ./tsconfig.server.json src/server/index.ts",
     "build": "next build",
-    "start": "next start",
+    "build:server": "tsc --project ./tsconfig.server.json",
+    "start": "NODE_ENV=production ts-node --project ./tsconfig.server.json src/server/index.ts",
+    "lint": "eslint ./src --ext .ts,.tsx",
+    "lint:fix": "eslint ./src --ext .ts,.tsx --fix",
     "test": "cp -rf ./test/mock/server/db.json.tmp ./test/mock/server/db.json && NODE_ENV=test NODE_OPTIONS='--max-old-space-size=4096' jest",
     "test:ci": "cp -rf ./test/mock/server/db.json.tmp ./test/mock/server/db.json && NODE_ENV=test NODE_OPTIONS='--max-old-space-size=4096' jest --runInBand"
   },
@@ -16,6 +19,7 @@
     "@types/redux": "^3.6.0",
     "axios": "^0.20.0",
     "change-case": "^4.1.2",
+    "http-proxy-middleware": "^2.0.6",
     "next": "^9.4.0",
     "next-compose-plugins": "^2.2.1",
     "next-transpile-modules": "^9.0.0",
