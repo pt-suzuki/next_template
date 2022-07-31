@@ -27,8 +27,8 @@ export class UserTranslatorImpl implements UserTranslator {
     if (result.isFailure()) return result;
     result.getValue().map((item) => {
       item.birthday = new Date(item.birthday!);
-      console.log(item.birthday);
       item.id = item.id ? Number(item.id) : undefined;
+      item.company_id = item.company_id ? Number(item.company_id) : item.company_id;
     });
     return result;
   }
