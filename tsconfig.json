@@ -1,19 +1,20 @@
 {
   "compilerOptions": {
-    "target": "es5",
-    "lib": ["dom", "dom.iterable", "esnext"],
-    "allowJs": true,
-    "skipLibCheck": true,
-    "strict": false,
-    "forceConsistentCasingInFileNames": true,
-    "noEmit": true,
-    "esModuleInterop": true,
+    "target": "ES5",
+    "lib": ["ES2019", "DOM", "DOM.Iterable", "esnext"],
     "module": "esnext",
     "moduleResolution": "node",
     "resolveJsonModule": true,
-    "isolatedModules": true,
+    "esModuleInterop": true,
+    "experimentalDecorators": true,
+    "allowJs": true,
+    "sourceMap": true,
+    "removeComments": true,
+    "emitDecoratorMetadata": true,
+    "strict": true,
     "rootDir": ".",
     "noImplicitAny": false,
+    "noEmit": true,
     "baseUrl": "./src",
     "jsx": "preserve",
     "paths": {
@@ -24,7 +25,18 @@
         "./*"
       ]
     },
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "isolatedModules": true
   },
-  "exclude": [".history", "node_modules"],
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "src"]
+  "exclude": [
+    ".history",
+    "node_modules"
+  ],
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    "src"
+  ]
 }

@@ -1,6 +1,6 @@
 const localStorageMock = (function () {
   const initialStore = {
-    'calc.companyId': '',
+    'test': '',
   };
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   let store: any = initialStore;
@@ -22,7 +22,7 @@ const localStorageMock = (function () {
 Object.defineProperty(window, 'localStorage', { value: localStorageMock });
 
 export const setMockCompanyId = (id = 1): void => {
-  localStorageMock.setItem('calc.companyId', String(id));
+  localStorageMock.setItem('test', String(id));
 };
 
 export const clearMockCompany = (): void => {

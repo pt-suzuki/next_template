@@ -1,5 +1,5 @@
 import { ApiConnection } from "../api_connection";
-import { ApiUri } from "../../../enums/ApiUri";
+import { ApiUri } from "../../../enums/api_uri";
 import { AuthTranslator } from "./auth_translator";
 import { SignInFormJson } from "./signIn_form";
 import { Auth } from "./auth";

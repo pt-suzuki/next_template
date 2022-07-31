@@ -2,7 +2,7 @@ import { SignInForm } from "./signIn_form";
 import { AuthRepository } from "./auth_repository";
 import { AuthTranslator } from "./auth_translator";
 import { Auth } from "./auth";
-import { Token } from "../../../enums/Token";
+import { Token } from "../../../enums/token";
 import { Result } from "../result";
 import { ResponseError } from "../response_error";
 

@@ -1,6 +1,6 @@
 import * as Axios from "axios";
-import { Token } from "../../enums/Token";
-import { ApiUri } from "../../enums/ApiUri";
+import { Token } from "../../enums/token";
+import { ApiUri } from "../../enums/api_uri";
 
 const create_csrf_token = (): string => {
   if (!process.browser) {

@@ -2,7 +2,7 @@ import { AxiosResponse } from 'axios';
 import { Result, Success, Failure } from './result';
 import { ResponseError } from './response_error';
 import { parseDate } from '~/helpers/date_helper';
-import { DEFAULT_ERROR_MESSAGE } from '~/constants/messages';
+import { DEFAULT_ERROR_MESSAGE } from '~/enums/messages';
 
 export interface ResponseHandler {
   translateResponseToModel<T>(response: any): Result<T, ResponseError>;

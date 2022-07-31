@@ -6,17 +6,13 @@ const PORT = 3228;
 
 export const startMockServer = (): void => {
   const app = jsonServer.create();
+  /*
   app.use(
     jsonServer.rewriter({
-      '/api/private/tags/pagenation':'/tags_pagenation',
-      '/api/private/tags/save_list_to_*': '/tags_to_$1',
-      '/api/private/tags/check_used/:id': '/tags/:id',
-      '/api/private/holidays/*': '/holidays',
-      '/api/private/wallet_txns/last_month_balance*': '/wallet_txns_last_month_balance',
-      '/api/private/companies/:id/steps': '/steps',
-      '/api/private/*': '/$1',
+      '/api/private/example':'/example',
     }),
   );
+  */
   const middlewares = jsonServer.defaults();
   const router = jsonServer.router('test/mock/server/db.json');
   app.use(middlewares);

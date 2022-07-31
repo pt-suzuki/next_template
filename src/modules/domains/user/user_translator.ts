@@ -13,7 +13,6 @@ export interface UserTranslator {
   translateResponseToContent(response: AxiosResponse): Result<User, ResponseError>;
   translateResponseToDeleteResult(response: AxiosResponse): Result<unknown, ResponseError>;
   translateContentToJson(content: User): any;
-  translateContentToFileForm(content: User): FormData;
 }
 
 export class UserTranslatorImpl implements UserTranslator {
@@ -24,14 +23,20 @@ export class UserTranslatorImpl implements UserTranslator {
   }
 
   public translateResponseToList(response: AxiosResponse): Result<User[], ResponseError> {
-    return this.responseHandler.translateResponseToModel<User[]>(response);
+    const result = this.responseHandler.translateResponseToModel<User[]>(response);
+    if (result.isFailure()) return result;
+    result.getValue().map((item) => {
+      item.birthday = new Date(item.birthday!);
+      console.log(item.birthday);
+      item.id = item.id ? Number(item.id) : undefined;
+    });
+    return result;
   }
 
   public translateResponseToContent(response: AxiosResponse): Result<User, ResponseError> {
     const result: Result<User, ResponseError> = this.responseHandler.translateResponseToModel<User>(response);
     if (result.isFailure()) return result;
-    result.getValue().role_list = result.getValue().role_list ? result.getValue().role_list : [];
-    result.getValue().group_list = result.getValue().group_list ? result.getValue().group_list : [];
+
     return result;
   }
 
@@ -53,11 +58,5 @@ export class UserTranslatorImpl implements UserTranslator {
 
   public translateDropDownFormToJson(dropDownForm: UserDropDownForm): UserDropDownForm {
     return dropDownForm;
-  }
-
-  public translateContentToFileForm(content: User): FormData {
-    const formData = new FormData();
-    formData.append("user_image_file", content.upload_file);
-    return formData;
   }
 }

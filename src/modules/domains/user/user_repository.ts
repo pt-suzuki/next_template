@@ -1,6 +1,6 @@
 import { ApiConnection } from "../api_connection";
 import { UserTranslator } from "./user_translator";
-import { ApiUri } from "../../../enums/ApiUri";
+import { ApiUri } from "../../../enums/api_uri";
 import { User } from "./user";
 import { UserSearchForm } from "./user_search_form";
 import { Result } from "../result";
